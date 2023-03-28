@@ -88,7 +88,7 @@ ob_start();
   </thead>
   <tbody>
 	<?php
-		
+		ob_start();
 
 		$TEST = $user_data['username'];
 		$query = "SELECT user_id FROM user WHERE username = '$TEST'";
