@@ -1,12 +1,12 @@
 <?php 
-//session_start();
-//ob_start();
+session_start();
+ob_start();
 //ob_start();
 
-	//include("dbh-inc.php");
-	//include("functions.php");
+	include("dbh-inc.php");
+	include("functions.php");
 
-	//$user_data = check_login($conn);
+	$user_data = check_login($conn);
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +52,6 @@
 				<li><a href="patient_profile.php">Profile</a></li>
 				<li><a href="patientappointments.php">Schedule Appointment</a></li>
                 <li><a href="transactions.php">Transactions</a></li>
-               <li><a href="patientprofile.php">Profile</a></li>
 				<li><a href ="form.php">Patient Form</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
@@ -88,12 +87,6 @@
   </thead>
   <tbody>
 	<?php
-		session_start();
-		ob_start();
-		include("dbh-inc.php");
-		include("functions.php");
-
-		$user_data = check_login($conn);
 		ob_start();
 
 		$TEST = $user_data['username'];
