@@ -28,7 +28,7 @@ session_start();
 					if($user_data['password'] === $password && $user_data['role'] === $role)
 					{
 						$_SESSION['username'] = $user_data['username'];
-						header("Location: index.php");
+						header("Location: index.html");
 						die;
 					}
 				}
